@@ -1,4 +1,5 @@
 // Source: https://github.com/TKJElectronics/
+//Questa libreria si occupa della
 
 #include <Wire.h>
 #include "Kalman.h" 

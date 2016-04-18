@@ -1,4 +1,6 @@
 /* 
+MAIN FILE 
+ 
   This software may be distributed and modified under the terms of the GNU
  General Public License version 2 (GPL2) as published by the Free Software
  Foundation and appearing in the file GPL2.TXT included in the packaging of
@@ -8,10 +10,10 @@
  
  Contact information
  -------------------
- 
+ first realse: 10 jun 2014
  Mohammad Zobeer, Andrea Rossi
- Web      :  balancingrobot.altervista.org
- e-mail   :  amministrazione.zubeer@gmail.com or areds13@gmail.com
+ Web:  balancingrobot.altervista.org
+ e-mail:  z.m.it@ieee.org or areds13@gmail.com
  */
  
 double Angolo;
@@ -23,19 +25,15 @@ void setup(){
   setGyro();
   setMotor();
   setupEncoder();
-  
-  
+
 }
 void loop(){ 
- 
-  
+    
   	Angolo=getGyro();
-        
-//if(abs(Angolo-setPoint)<1) Angolo=setPoint;
 	drive = updatePid(setPoint, Angolo); 
-drive=map(drive,-255,255,170,10);
-	  
+    drive=map(drive,-255,255,170,10);
 	driveMotor(drive); 
+	//data test
 	//Serial.print(Angolo); Serial.print("\t");Serial.println(drive);
  
 }
